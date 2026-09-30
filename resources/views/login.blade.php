@@ -1,5 +1,5 @@
 <x-guest-layout title="Login - SI Akademik">
-    <div class="flex items-center justify-center min-h-[80vh]">
+    <div class="flex items-center justify-center min-h-[80vh] px-4">
         <div class="w-full max-w-md">
             <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden border border-white/50">
                 <div class="p-8">
@@ -27,19 +27,19 @@
                         @csrf
                         <div>
                             <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus
-                                class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                            <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="email" placeholder="Email address"
+                                class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">
                         </div>
 
                         <div>
                             <label for="password" class="block text-sm font-medium text-slate-700 mb-1">Password</label>
-                            <input type="password" id="password" name="password" required
-                                class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                            <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Password"
+                                class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">
                         </div>
 
                         <div class="flex items-center">
                             <input type="checkbox" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}
-                                class="rounded border-slate-300 text-indigo-600 shadow-sm focus:ring-indigo-500">
+                                class="h-4 w-4 rounded border-slate-300 bg-white text-indigo-600 focus:ring-2 focus:ring-indigo-500">
                             <label for="remember" class="ml-2 block text-sm text-slate-600">Ingat saya</label>
                         </div>
 
@@ -48,7 +48,7 @@
                         </button>
                     </form>
 
-                    <div class="mt-8 pt-6 border-t border-slate-100">
+                    {{-- <div class="mt-8 pt-6 border-t border-slate-100">
                         <p class="text-xs font-semibold text-slate-500 mb-3 text-center uppercase tracking-wider">Kredensial Demo</p>
                         <div class="space-y-2">
                             <div class="flex justify-between items-center text-sm p-2 bg-slate-50 rounded-lg border border-slate-100">
@@ -60,7 +60,7 @@
                                 <span class="text-slate-400 font-mono text-xs">password</span>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

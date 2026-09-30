@@ -13,28 +13,28 @@
                     <div>
                         <label for="kode" class="block text-sm font-medium text-slate-700 mb-1">Kode Klaster <span class="text-red-500">*</span></label>
                         <input type="text" name="kode" id="kode" value="{{ old('kode', $klaster->kode ?? '') }}" required placeholder="Contoh: RPL"
-                            class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors shadow-sm">
+                            class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">
                         @error('kode') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
                     </div>
 
                     <div>
                         <label for="nama" class="block text-sm font-medium text-slate-700 mb-1">Nama Klaster / Rumpun <span class="text-red-500">*</span></label>
                         <input type="text" name="nama" id="nama" value="{{ old('nama', $klaster->nama ?? '') }}" required placeholder="Contoh: Rekayasa Perangkat Lunak"
-                            class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors shadow-sm">
+                            class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">
                         @error('nama') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
                     </div>
 
                     <div>
                         <label for="deskripsi" class="block text-sm font-medium text-slate-700 mb-1">Deskripsi Singkat</label>
                         <textarea name="deskripsi" id="deskripsi" rows="3"
-                            class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors shadow-sm">{{ old('deskripsi', $klaster->deskripsi ?? '') }}</textarea>
+                            class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">{{ old('deskripsi', $klaster->deskripsi ?? '') }}</textarea>
                         @error('deskripsi') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
                     </div>
 
                     <div class="flex items-center">
                         <input type="hidden" name="is_active" value="0">
                         <input type="checkbox" name="is_active" id="is_active" value="1" {{ old('is_active', $klaster->is_active ?? true) ? 'checked' : '' }}
-                            class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+                            class="h-5 w-5 rounded border-slate-300 bg-white text-indigo-600 focus:ring-2 focus:ring-indigo-500">
                         <label for="is_active" class="ml-2 block text-sm text-slate-700 font-medium">Klaster Aktif / Tersedia</label>
                     </div>
 

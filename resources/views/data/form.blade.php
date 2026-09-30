@@ -15,14 +15,14 @@
                     <div>
                         <label class="block text-sm font-medium text-slate-700 mb-1">Judul <span class="text-red-500">*</span></label>
                         <input type="text" name="title" value="{{ old('title', $dataItem->title ?? '') }}" required
-                            class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                            class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">
                         @error('title') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-slate-700 mb-1">Deskripsi</label>
                         <textarea name="description" rows="4"
-                            class="w-full rounded-xl border-slate-200 bg-white/50 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">{{ old('description', $dataItem->description ?? '') }}</textarea>
+                            class="w-full bg-white/50 border border-slate-300 rounded-xl p-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40 transition-colors shadow-sm">{{ old('description', $dataItem->description ?? '') }}</textarea>
                         @error('description') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
 

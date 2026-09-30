@@ -24,7 +24,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased relative min-h-screen flex flex-col justify-center overflow-hidden">
+<body class="bg-slate-50 text-slate-800 antialiased relative min-h-screen flex flex-col justify-center overflow-x-hidden">
     <!-- Background Elements (Vibrant Glassmorphism) -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
